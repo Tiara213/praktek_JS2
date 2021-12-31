@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas JS-1 Program Login</title>
+    <style>
+        #satu {
+            text-align: center;
+        }
+
+        .container {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="satu">Halaman Login</h1>
+        <br>
+        <form name="login">
+            <label>Username</label>
+            <br>
+            <input type="text" name="username" placeholder="Masukkan Username">
+            <br>
+            <label>Password</label>
+            <br>
+            <input type="number" name="password" placeholder="Masukkan Password">
+            <br>
+            
+            <button type="login" onclick="Login()">Login</button>
+        </form>
+
+        <script>
+
+            function Login() {
+
+                let username = document.forms["login"] ["username"].value;
+                let password = document.forms["login"] ["password"].value;
+               
+                if (username == "Tiara213" && password == "020103") {
+                    alert("Anda Berhasil Login");
+                    return true;
+                } 
+                else if (username == "" && password == "") {
+                    alert("Masukkan Username dan Password yang Anda Miliki");
+                    return false;
+                }
+                else {
+                    alert("Maaf, Username dan Password Anda Salah! Mohon Coba Lagi");
+                    return false;
+                }
+            }
+        </script>
+    </div>
+
+</body>
+</html>

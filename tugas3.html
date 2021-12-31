@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Book Yuhu:)</title>
+    <style>
+        html,body {
+            padding:0;
+            margin:0;
+            max-width:100%;
+            user-select:none;
+        }
+        
+        header {
+            text-align: center;
+        }
+
+        footer #command {
+        position:fixed;
+        bottom:0;
+        width:100%;
+        padding:7px 7px;
+        padding-right:7px;
+        margin-bottom:5px;
+        border-radius:20px;
+        border:0.5px solid #9e9e9e50;
+        -ms-box-sizing:border-box;
+        box-sizing:border-box ;
+        background-color:#fff;
+        }
+        #command input {
+            display:block;
+            width:73%;
+            float:left;
+        }
+        #pesan {
+            font-family: 'Times New Roman', Times, serif;
+        }
+        button {
+            background-color:#1ee599;
+            color:#fff;
+            border-radius:20px;
+            font-weight:300;
+            float:right;
+        }
+        #command input,#command button {
+        padding:10px 15px;
+        border:0;
+        outline:0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="hasil">ChatBook</h1>
+    </header>
+
+    <footer id="command">
+        <input type="text" id="pesan" placeholder="Kirim pesan" onchange="kirim()">
+        <button onclick="kirim()">Kirim</button>
+    </footer>
+
+    <script>
+        let masukan = document.getElementById("pesan")
+        let hasil = document.getElementById("hasil")
+        let penampung = ""
+
+        function kirim() {
+            penampung += masukan.value + "<br>"
+            hasil.innerHTML = penampung 
+            masukan.value = ""
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas JS-4 Menampilkan Foto</title>
+</head>
+<body>
+    <select name="" id="hewan" onchange="berubah()">
+        <option value="">** Pilih Gambar Yuk:) **</option>
+        <option value="jerapah">Jerapah</option>
+        <option value="kuda">Kuda</option>
+        <option value="orang_utan">Orang Utan</option>
+        <option value="panda">Panda</option>
+        <option value="sapi">Sapi</option>
+    </select>
+    <br>
+
+    <div style="display: flex; justify-content: center;" id="tempat_gambar">
+
+    </div>
+
+    <script>
+        let hewan = document.getElementById("hewan")
+        let tempat_gambar = document.getElementById("tempat_gambar")
+
+        function berubah() {
+            switch (hewan.value) {
+                case "jerapah":
+                    tempat_gambar.innerHTML = '<img src="jerapah.jpg" alt="">'
+                    alert("Ini Gambar Jerapah")
+                    break;
+
+                case "kuda":
+                tempat_gambar.innerHTML = '<img src="kuda.crdownload" alt="">'
+                alert("Ini Gambar Kuda")
+                break;
+
+                case "orang_utan":
+                tempat_gambar.innerHTML = '<img src="orang utan.jpg" alt="">'
+                alert("Ini Gambar Orang Utan")
+                break;
+
+                case "panda":
+                tempat_gambar.innerHTML = '<img src="panda.jpg" alt="">'
+                alert("Ini Gambar Panda")
+                break;
+
+                case "sapi":
+                tempat_gambar.innerHTML = '<img src="sapi.jpg" alt="">'
+                alert("Ini Gambar Sapi")
+                break;
+
+                default:
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
